@@ -376,7 +376,12 @@ class RecursiveUrlLoader(BaseLoader):
         self.base_url = base_url if base_url is not None else self._parse_base_url(url)
         self.proxies = proxies
 
-    def _parse_base_url(self, url) -> str:
+    def _parse_base_url(self, url: str) -> str:
+        """Parse the base URL from the given URL.
+
+        Args:
+            url: The URL to parse.
+        """
         if not url.startswith(("http://", "https://")):
             url = "https://" + url
         parsed_url = urlparse(url)
