@@ -381,7 +381,7 @@ class RecursiveUrlLoader(BaseLoader):
 
         Args:
             url: The URL to parse.
-            
+
         Returns:
             The base URL with scheme and netloc only, ending with a slash.
         """
